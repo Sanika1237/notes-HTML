@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="#" method="post">
+        <p>
+            <label for="firstName">First Name:</label><br>
+            <input type="text" id="firstName" name="firstName" required>
+        </p>
+        <p>
+            <label for="lastName">Last Name:</label><br>
+            <input type="text" id="lastName" name="lastName" required>
+        </p>
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required>
+        </p>
+        <p>
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </p>
+        <p>
+            <label>Hobbies:</label><br>
+            <input type="checkbox" id="reading" name="hobbies" value="reading">
+            <label for="reading">Reading</label><br>
+            <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+            <label for="traveling">Traveling</label><br>
+            <input type="checkbox" id="sports" name="hobbies" value="sports">
+            <label for="sports">Sports</label>
+        </p>
+        <p>
+            <label for="country">Country:</label><br>
+            <select id="country" name="country">
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+                <option value="other">Other</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Register">
+        </p>
+    </form>
+</body>
+</html>

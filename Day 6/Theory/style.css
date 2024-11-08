@@ -1,0 +1,45 @@
+p.uppercase{
+    text-transform: uppercase;
+}
+p.lowercase{
+    text-transform: lowercase;
+}
+p.capitalize{
+    text-transform: capitalize;
+}
+p.initial{
+    text-transform: initial;
+}
+P.inherit{
+    text-transform: inherit;
+}
+p.i{
+    text-indent: 50px;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    line-height: 50px;
+    /*text-shadow:2px 2px purple;*/
+    font-family: "Agdasima", sans-serif; 
+    font-variant:normal;
+    width: calc(100% - 200px);
+    background-color:violet;
+}
+ul.l{
+    list-style-type:square;
+    list-style-position: outside;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-variant: small-caps;
+    width: min(50%, 300px);
+    background-color:violet;
+}
+ol.o{
+    list-style-type: upper-roman;
+    list-style-position: outside;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-variant: small-caps;
+    font-size: 2vh;
+    width: max(50%, 300px);
+    background-color:violet;
+}

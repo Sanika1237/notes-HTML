@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Business Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #006177;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('T3.jpg');
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 2rem;
+        }
+
+        .services h2 {
+            color: #0088cc;
+            margin-bottom: 1rem;
+        }
+
+        .services ul {
+            list-style-type: none;
+            margin-left: 1rem;
+        }
+
+        .services li {
+            margin: 0.5rem 0;
+            color: #333;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #f0f0f0;
+            padding: 2rem;
+        }
+
+        .about h2 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 2rem;
+        }
+
+        .contact h2 {
+            color: #dc3545;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            margin: 0.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #006177;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Our Business Name</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Business</h1>
+            <p>Your one-stop solution for all your needs</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of services to help your business grow</p>
+        <ul>
+            <li>Consulting Services</li>
+            <li>Professional Training</li>
+            <li>Marketing and Advertising Solutions</li>
+        </ul>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are a dedicated team with over 10 years of experience in business development and management. Our mission is to provide high quality services tailored to each client's unique needs.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: contact@ourbusiness.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Small Business. All rights reserved.</p>
+    </footer>
+</body>
+</html>

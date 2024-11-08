@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="p-20">
+    <div class="contanier bg-orange-300 p-10 mb-10 w-96">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est mollitia quia exercitationem sed repudiandae molestiae nostrum beatae cupiditate tempora. Explicabo qui reiciendis repudiandae corporis rerum quisquam obcaecati ipsum odio amet.</div>
+    <div class="contanier bg-orange-300 p-10 mb-10 w-80">w-80</div>
+    <div class="contanier bg-orange-300 p-10 mb-10 w-64">w-64</div>
+    <div class="contanier bg-orange-300 p-10 mb-10 w-48">w-48</div>
+    <div class="contanier bg-orange-300 p-10 mb-10 w-40">w-40</div>
+    <div class="contanier bg-orange-300 p-10 mb-10 w-32">w-32</div>
+    <div class="contanier bg-orange-300 p-10 mb-10 w-24">w-24</div>
+    <br>
+    <h1><b>width</b></h1><br>
+    <div>
+        <div class="contanier bg-red-300 p-10 mb-10 w-1/2 ... ">w-1/2</div>
+    </div>
+    <div>
+        <div class="contanier bg-blue-300 p-10 mb-10 w-2/5 ...">w-2/5</div>
+    </div>
+    <div>
+        <div class="contanier bg-purple-300 p-10 mb-10 w-3/5 ...">w-3/5</div>
+    </div>
+    <h1><b>width percentage</b></h1><br>
+
+    <div>
+        <div class="contanier bg-blue-300 p-10 mb-10 w-full max-w-96">max-w-96</div>
+        <div class="contanier bg-blue-300 p-10 mb-10 w-full max-w-80">max-w-80</div>
+        <div class="contanier bg-blue-300 p-10 mb-10 w-full max-w-64">max-w-64</div>
+        <div class="contanier bg-blue-300 p-10 mb-10 w-full max-w-48">max-w-48</div>
+        <div class="contanier bg-blue-300 p-10 mb-10 w-full max-w-40">max-w-40</div>
+        <div class="contanier bg-blue-300 p-10 mb-10 w-full max-w-32">max-w-32</div>
+        <div class="contanier bg-blue-300 p-10 mb-10 w-full max-w-24">max-w-24</div>
+    </div>
+    <h1><b>min width</b></h1><br>
+
+    <div class="contanier bg-orange-300 p-40 mb-10 w-96 ...">
+        <div class="contanier bg-purple-300 p-10 mb-10  min-w-80 ...">Lorem ipsum dolor</div>
+        <div class="contanier bg-purple-300 p-10 mb-10  min-w-64 ...">Lorem ipsum dolor</div>
+        <div class="contanier bg-purple-300 p-10 mb-10  min-w-48 ...">min-w-48</div>
+        <div class="contanier bg-purple-300 p-10 mb-10  min-w-40 ...">min-w-40</div>
+        <div class="contanier bg-purple-300 p-10 mb-10  min-w-32 ...">min-w-32</div>
+        <div class="contanier bg-purple-300 p-10 mb-10  min-w-24 ...">min-w-24</div>
+        <div class="contanier bg-purple-300 p-10 mb-10  min-w-full ...">min-w-full</div>
+    </div>
+    <h1><b>position</b></h1><br>
+
+    <div class="relative w-1/2 h-40 bg-green-200">
+        <p>Relative</p>
+        <div class="absolute bottom-0 right-0 bg-teal-500 p-4">
+          <p>Absolute</p>
+        </div>
+      </div>
+  
+      <div class="relative w-1/2 h-40 bg-green-200 mt-5 mb-5">
+        <p>Relative</p>
+        <div class="absolute left-0 top-0 h-16 w-16 bg-teal-500">
+          <p>Absolute</p>
+        </div>
+      </div>
+  
+      <div class="relative w-1/2 h-40 bg-green-200 mt-5 mb-5">
+        <p>Relative</p>
+        <div class="absolute right-0 top-0 h-16 w-16 bg-teal-500">
+          <p>Absolute</p>
+        </div>
+      </div>
+  
+      <div class="relative w-1/2 h-40 bg-green-200 mt-5 mb-5">
+        <p>Relative</p>
+        <div class="absolute bottom-0 h-16 w-16 bg-teal-500">
+          <p>Absolute</p>
+        </div>
+      </div>
+
+      <h1 class="mb-3">Display</h1>
+    <div class="bg-indigo-100 p-10 mb-10 w-[600px]">
+      <span class="bg-red-300 p-10 mb-10 inline">
+        1. This is display inline and will wrap normally</span>
+      <span class="bg-purple-300 p-10 mb-10 inline-block" >2. This is display inline-block and will not extend beyond it's
+        parent</span>
+      <span class="bg-orange-300 p-10 mb-10 block">3. This is display block and will move to it's own line</span>
+      <span class="bg-blue-300 p-10 mb-10 hidden">This is display none and will not display at all</span>
+    </div>
+    <div class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+<div class="h-14 bg-gradient-to-r from-sky-500 to-indigo-500"></div>
+<div class="h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500"></div>
+<div class="h-14 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+<div class="p-10 mb-20 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ_2oII-AssPFNOvcLQ6ecJ6ZWQlUbKU3j8w&s')]">
+ jkasjkasjkasjkasjkaj
+  </div>
+</body>
+</html>

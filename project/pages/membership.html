@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Center Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+<div class="flex min-h-screen">
+        <!-- Sidebar -->
+    <aside class="w-64 bg-black text-white flex flex-col">
+        <div class="p-4">
+            <img src="../assets/logo.png" alt="Logo" class="mx-auto">
+        </div>
+        <nav class="flex flex-col space-y-4 px-4 mt-4">
+            <div class="relative">
+                <a href="#" id="adminToggle" class="flex items-center justify-between space-x-2 text-white font-bold hover:text-orange-400">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-home"></i>
+                        <span>Admin</span>
+                    </div>
+                    <i id="adminArrow" class="fas fa-chevron-down transition-transform duration-300"></i>
+                </a>
+                <!-- Admin Options Dropdown -->
+                <div id="adminOptions" class="hidden absolute down-full bg-gray-800 rounded-md shadow-lg">
+                    <div class="py-1">
+                        <a href="./Trainer.html" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Staff/Trainers</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                            <i class="fas fa-id-card"></i>
+                            <span>Membership</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>All Classes</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Attendance</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-users"></i>
+                <span>All Members</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-user-tie"></i>
+                <span>Trainer</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-running"></i>
+                <span>Trainee</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-heartbeat"></i>
+                <span>Health Updates</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-credit-card"></i>
+                <span>Member Payment</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-chart-line"></i>
+                <span>Plan</span>
+            </a>
+        </nav>
+     </aside>
+  
+      <!-- Main Content -->
+      <main class="flex-1 p-6">
+        <!-- Header -->
+        <header class="flex items-center justify-between">
+            <h1 class="text-2xl font-bold">Welcome Admin!</h1>
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-bell text-gray-500"></i>
+                <i class="fas fa-cog text-gray-500 hover:text-orange-400 cursor-pointer"></i>
+                <img src="https://cdn-icons-png.flaticon.com/512/4515/4515630.png" alt="User" 
+                     class="rounded-full w-10 h-10">
+            </div>
+        </header>
+
+        <div class="max-w-6xl mx-auto bg-white shadow-md rounded-lg">
+            <!-- Header Section -->
+            <div class="p-4 border-b border-gray-300 flex items-center justify-between">
+                <!-- Membership Title -->
+                <h2 class="text-xl font-bold">Membership</h2>
+    
+                <!-- Search Bar and Add Button -->
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <input type="text" placeholder="Search Membership" class="w-60 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+    
+                    <!-- Add Membership Button -->
+                     <a href="./Add_members.html">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 flex items-center">
+                            <span class="mr-2">Add Membership</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                        </button>
+                     </a>
+                    
+                </div>
+            </div>
+    
+            <!-- Table Section -->
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border-collapse border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-300 p-3">
+                            <th class="p-3 border-b border-gray-300 text-left text-gray-600 font-medium">Sr.No</th>
+                            <th class="p-3 border-b border-gray-300 text-left text-gray-600 font-medium">Membership Name</th>
+                            <th class="p-3 border-b border-gray-300 text-left text-gray-600 font-medium">Description</th>
+                            <th class="p-3 border-b border-gray-300 text-left text-gray-600 font-medium">Amount</th>
+                            <th class="p-3 border-b border-gray-300 text-left text-gray-600 font-medium">Membership Period</th>
+                            <th class="p-3 border-b border-gray-300 text-left text-gray-600 font-medium">Installment Period</th>
+                            <th class="p-3 border-b border-gray-300 text-left text-gray-600 font-medium">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Repeatable Rows -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 border-b border-gray-300">1</td>
+                            <td class="p-3 border-b border-gray-300">Basic Membership</td>
+                            <td class="p-3 border-b border-gray-300 text-sm">
+                                Offers access to standard gym facilities like cardio and weight equipment during regular hours. Ideal for individuals seeking general fitness without additional perks.
+                            </td>
+                            <td class="p-3 border-b border-gray-300">1000 /-</td>
+                            <td class="p-3 border-b border-gray-300">30 Days</td>
+                            <td class="p-3 border-b border-gray-300">1 month</td>
+                            <td class="p-3 border-b border-gray-300 flex items-center space-x-2">
+                                <button class="text-blue-500 hover:text-blue-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5h2m0 0v14m0-14h5m-5 0H6"></path>
+                                    </svg>
+                                </button>
+                                <button class="text-red-500 hover:text-red-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4m-4 0h4"></path>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 border-b border-gray-300">1</td>
+                            <td class="p-3 border-b border-gray-300">Basic Membership</td>
+                            <td class="p-3 border-b border-gray-300 text-sm">
+                                Offers access to standard gym facilities like cardio and weight equipment during regular hours. Ideal for individuals seeking general fitness without additional perks.
+                            </td>
+                            <td class="p-3 border-b border-gray-300">1000 /-</td>
+                            <td class="p-3 border-b border-gray-300">30 Days</td>
+                            <td class="p-3 border-b border-gray-300">1 month</td>
+                            <td class="p-3 border-b border-gray-300 flex items-center space-x-2">
+                                <button class="text-blue-500 hover:text-blue-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5h2m0 0v14m0-14h5m-5 0H6"></path>
+                                    </svg>
+                                </button>
+                                <button class="text-red-500 hover:text-red-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4m-4 0h4"></path>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 border-b border-gray-300">1</td>
+                            <td class="p-3 border-b border-gray-300">Basic Membership</td>
+                            <td class="p-3 border-b border-gray-300 text-sm">
+                                Offers access to standard gym facilities like cardio and weight equipment during regular hours. Ideal for individuals seeking general fitness without additional perks.
+                            </td>
+                            <td class="p-3 border-b border-gray-300">1000 /-</td>
+                            <td class="p-3 border-b border-gray-300">30 Days</td>
+                            <td class="p-3 border-b border-gray-300">1 month</td>
+                            <td class="p-3 border-b border-gray-300 flex items-center space-x-2">
+                                <button class="text-blue-500 hover:text-blue-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5h2m0 0v14m0-14h5m-5 0H6"></path>
+                                    </svg>
+                                </button>
+                                <button class="text-red-500 hover:text-red-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4m-4 0h4"></path>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 border-b border-gray-300">1</td>
+                            <td class="p-3 border-b border-gray-300">Basic Membership</td>
+                            <td class="p-3 border-b border-gray-300 text-sm">
+                                Offers access to standard gym facilities like cardio and weight equipment during regular hours. Ideal for individuals seeking general fitness without additional perks.
+                            </td>
+                            <td class="p-3 border-b border-gray-300">1000 /-</td>
+                            <td class="p-3 border-b border-gray-300">30 Days</td>
+                            <td class="p-3 border-b border-gray-300">1 month</td>
+                            <td class="p-3 border-b border-gray-300 flex items-center space-x-2">
+                                <button class="text-blue-500 hover:text-blue-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5h2m0 0v14m0-14h5m-5 0H6"></path>
+                                    </svg>
+                                </button>
+                                <button class="text-red-500 hover:text-red-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4m-4 0h4"></path>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 border-b border-gray-300">1</td>
+                            <td class="p-3 border-b border-gray-300">Basic Membership</td>
+                            <td class="p-3 border-b border-gray-300 text-sm">
+                                Offers access to standard gym facilities like cardio and weight equipment during regular hours. Ideal for individuals seeking general fitness without additional perks.
+                            </td>
+                            <td class="p-3 border-b border-gray-300">1000 /-</td>
+                            <td class="p-3 border-b border-gray-300">30 Days</td>
+                            <td class="p-3 border-b border-gray-300">1 month</td>
+                            <td class="p-3 border-b border-gray-300 flex items-center space-x-2">
+                                <button class="text-blue-500 hover:text-blue-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5h2m0 0v14m0-14h5m-5 0H6"></path>
+                                    </svg>
+                                </button>
+                                <button class="text-red-500 hover:text-red-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4m-4 0h4"></path>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        const adminToggle = document.getElementById('adminToggle');
+        const adminOptions = document.getElementById('adminOptions');
+        const adminArrow = document.getElementById('adminArrow');
+
+        adminToggle.addEventListener('click', function() {
+            adminOptions.classList.toggle('hidden');
+            adminArrow.classList.toggle('rotate-180');
+        });
+    </script>
+</body>

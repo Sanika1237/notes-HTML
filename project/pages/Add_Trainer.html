@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Center Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Main Container -->
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-black text-white flex flex-col">
+            <div class="p-4">
+                <img src="../assets/logo.png" alt="Logo" class="mx-auto">
+            </div>
+            <nav class="flex flex-col space-y-4 px-4 mt-4">
+                <div class="relative">
+                    <a href="#" id="adminToggle" class="flex items-center justify-between space-x-2 text-white font-bold hover:text-orange-400">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-home"></i>
+                            <span>Admin</span>
+                        </div>
+                        <i id="adminArrow" class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </a>
+                    <!-- Admin Options Dropdown -->
+                    <div id="adminOptions" class="hidden absolute down-full bg-gray-800 rounded-md shadow-lg">
+                        <div class="py-1">
+                            <a href="./Trainer.html" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Staff/Trainers</span>
+                            </a>
+                            <a href="./membership.html" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                                <i class="fas fa-id-card"></i>
+                                <span>Membership</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                                <i class="fas fa-dumbbell"></i>
+                                <span>All Classes</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Attendance</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                    <i class="fas fa-users"></i>
+                    <span>All Members</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Trainer</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                    <i class="fas fa-running"></i>
+                    <span>Trainee</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Health Updates</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Member Payment</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Plan</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Header -->
+            <header class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold">Welcome Admin!</h1>
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-bell text-gray-500"></i>
+                    <i class="fas fa-cog text-gray-500 hover:text-orange-400 cursor-pointer"></i>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4515/4515630.png" alt="User" 
+                         class="rounded-full w-10 h-10">
+                </div>
+            </header>
+
+            <!-- Add Trainer Section -->
+            <div class="max-w-8xl mx-auto bg-white p-6 rounded-md shadow-md">
+                <div class="mb-6">
+                    <h1 class="text-xl font-bold text-gray-700">Add Staff/Trainer</h1>
+                </div>
+
+              <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Upload Photo -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Photo</label>
+                            <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-dashed border-gray-300 rounded-md">
+                                <div class="space-y-1 text-center">
+                                    <svg class="mx-auto h-12 w-12 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 16v4m10-4v4m-5-4v8M4 12V4m16 8V4m-5 0l5 8H9l5-8z" />
+                                    </svg>
+                                    <div class="flex text-sm text-gray-600">
+                                        <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-orange-600 hover:text-orange-500">
+                                            <span>Upload or Drag here</span>
+                                            <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Staff Full Name -->
+                      <div>
+                         <label for="full-name" class="block text-sm font-medium text-gray-700">Staff Full Name</label>
+                         <input type="text" id="full-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
+                      </div>
+          
+                       <!-- Profession -->
+                      <div>
+                      <label for="profession" class="block text-sm font-medium text-gray-700">Profession</label>
+                       <input type="text" id="profession" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
+                     </div>
+          
+                       <!-- Contact No -->
+                     <div>
+                         <label for="contact-no" class="block text-sm font-medium text-gray-700">Contact No.</label>
+                         <input type="text" id="contact-no" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
+                     </div>
+          
+                      <!-- Experience -->
+                      <div>
+                          <label for="experience" class="block text-sm font-medium text-gray-700">Experience</label>
+                          <input type="text" id="experience" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
+                      </div>
+          
+                      <!-- Email -->
+                     <div>
+                         <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                         <input type="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
+                       </div>
+          
+                     <!-- DOB -->
+                      <div>
+                          <label for="dob" class="block text-sm font-medium text-gray-700">DOB</label>
+                          <input type="date" id="dob" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
+                     </div>
+          
+                    <!-- Batch -->
+                     <div>
+                           <label for="batch" class="block text-sm font-medium text-gray-700">Batch</label>
+                          <input type="text" id="batch" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm">
+                     </div>
+          
+                     <!-- Address -->
+                      <div class="col-span-1 md:col-span-2">
+                           <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                          <textarea id="address" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm"></textarea>
+                      </div>
+          
+                  <!-- About Trainer -->
+                  <div class="col-span-1 md:col-span-2">
+                    <label for="about-trainer" class="block text-sm font-medium text-gray-700">About Trainer</label>
+                    <textarea id="about-trainer" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-orange-500 focus:border-orange-500 sm:text-sm"></textarea>
+                  </div>
+                </div>
+          
+                <!-- Buttons -->
+                <div class="mt-6 flex justify-start space-x-4">
+                  <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+                    Save
+                  </button>
+                  <button type="reset" class="inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+                    Reset
+                  </button>
+                </div>
+              </form>
+            </div>
+      </div>
+                     
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const adminToggle = document.getElementById('adminToggle');
+        const adminOptions = document.getElementById('adminOptions');
+        const adminArrow = document.getElementById('adminArrow');
+
+        adminToggle.addEventListener('click', function() {
+            adminOptions.classList.toggle('hidden');
+            adminArrow.classList.toggle('rotate-180');
+        });
+    </script>
+</body>
+</html>

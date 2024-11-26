@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Center Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+<div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-black text-white flex flex-col">
+        <div class="p-4">
+            <img src="../assets/logo.png" alt="Logo" class="mx-auto">
+        </div>
+        <nav class="flex flex-col space-y-4 px-4 mt-4">
+            <div class="relative">
+                <a href="#" id="adminToggle" class="flex items-center justify-between space-x-2 text-white font-bold hover:text-orange-400">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-home"></i>
+                        <span>Admin</span>
+                    </div>
+                    <i id="adminArrow" class="fas fa-chevron-down transition-transform duration-300"></i>
+                </a>
+                <!-- Admin Options Dropdown -->
+                <div id="adminOptions" class="hidden absolute down-full bg-gray-800 rounded-md shadow-lg">
+                    <div class="py-1">
+                        <a href="./Trainer.html" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Staff/Trainers</span>
+                        </a>
+                        <a href="./membership.html" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                            <i class="fas fa-id-card"></i>
+                            <span>Membership</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>All Classes</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Attendance</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-users"></i>
+                <span>All Members</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-user-tie"></i>
+                <span>Trainer</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-running"></i>
+                <span>Trainee</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-heartbeat"></i>
+                <span>Health Updates</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-credit-card"></i>
+                <span>Member Payment</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+                <i class="fas fa-chart-line"></i>
+                <span>Plan</span>
+            </a>
+        </nav>
+    </aside>
+  
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+        <!-- Header -->
+        <header class="flex items-center justify-between">
+            <h1 class="text-2xl font-bold">Welcome Admin!</h1>
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-bell text-gray-500"></i>
+                <i class="fas fa-cog text-gray-500 hover:text-orange-400 cursor-pointer"></i>
+                <img src="https://cdn-icons-png.flaticon.com/512/4515/4515630.png" alt="User" 
+                     class="rounded-full w-10 h-10">
+            </div>
+        </header>
+
+        <!-- About Container -->
+        <div class="max-w-6xl mx-auto p-8">
+            <!-- Details Card -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <h2 class="text-xl font-bold text-gray-700 mb-4 md:mb-0 md:w-1/2">View Details</h2>
+                    <div class="ml-auto mb-4 md:mb-0">
+                        <input 
+                            type="text" 
+                            placeholder="Search Staff name" 
+                            class="border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-orange-400"
+                        />
+                    </div>
+                </div>
+                <hr class="border-gray-300 my-4">
+                <h2 class="text-xl text-gray-700 mb-4 md:mb-0 md:w-1/2">Personal Details</h2>
+                <br>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="flex flex-col items-center">
+                        <img 
+                            src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA3L2pvYjEwNjAtMTQucG5n.png" 
+                            alt="Profile" 
+                            class="rounded-full w-32 h-32 mb-4"
+                        />
+                        <h3 class="text-2xl font-bold text-gray-800">Staff Full Name</h3>
+                        <p class="text-gray-500">Yoga</p>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold text-gray-700 mb-2">About</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            She is a certified yoga instructor with over 2 years of experience teaching a 
+                            variety of yoga styles, including Vinyasa, Hatha, and Yin yoga. She specializes in 
+                            creating inclusive, beginner-friendly classes while also offering advanced poses 
+                            for seasoned practitioners. Sarah's approach combines mindfulness, breath control, 
+                            and strength-building techniques. She is passionate about helping students enhance 
+                            their flexibility, balance, and inner calm, making every session both challenging 
+                            and rejuvenating.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-1/3">
+                        <h3 class="text-lg font-bold text-gray-700 mb-2">Contact Details</h3><br>
+                        <p class="text-gray-500">
+                            <span class="font-semibold text-gray-700">Email:</span> abc@gmail.com
+                        </p><br>
+                        <p class="text-gray-500">
+                            <span class="font-semibold text-gray-700">Contact No.:</span> 1234567890
+                        </p><br>
+                        <p class="text-gray-500">
+                            <span class="font-semibold text-gray-700">Address:</span> 
+                            123 Harmony Lane, Suite 4B <br>
+                            Melodyville, State 56789 <br>
+                            Country
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-lg font-bold text-gray-700 mb-2">Date of Birth</h3>
+                    <p class="text-gray-500">September 24, 1995</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script>
+    const adminToggle = document.getElementById('adminToggle');
+    const adminOptions = document.getElementById('adminOptions');
+    const adminArrow = document.getElementById('adminArrow');
+
+    adminToggle.addEventListener('click', function() {
+        adminOptions.classList.toggle('hidden');
+        adminArrow.classList.toggle('rotate-180');
+    });
+</script>
+</body>
+</html>

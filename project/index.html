@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Center Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body class="bg-gray-100">
+  <!-- Main Wrapper -->
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-black text-white flex flex-col">
+      <div class="p-4">
+          <img src="../project/assets/logo.png" alt="Logo" class="mx-auto">
+      </div>
+      <nav class="flex flex-col space-y-4 px-4 mt-4">
+          <div class="relative">
+              <a href="#" id="adminToggle" class="flex items-center justify-between space-x-2 text-white font-bold hover:text-orange-400">
+                  <div class="flex items-center space-x-2">
+                      <i class="fas fa-home"></i>
+                      <span>Admin</span>
+                  </div>
+                  <i id="adminArrow" class="fas fa-chevron-down transition-transform duration-300"></i>
+              </a>
+              <!-- Admin Options Dropdown -->
+              <div id="adminOptions" class="hidden absolute down-full top-0 ml-2 bg-gray-800 rounded-md shadow-lg">
+                  <div class="py-1">
+                      <a href="../project/pages/Trainer.html" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                          <i class="fas fa-user-tie"></i>
+                          <span>Staff/Trainers</span>
+                      </a>
+                      <a href="./pages/membership.html" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                          <i class="fas fa-id-card"></i>
+                          <span>Membership</span>
+                      </a>
+                      <a href="#" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                          <i class="fas fa-dumbbell"></i>
+                          <span>All Classes</span>
+                      </a>
+                      <a href="#" class="flex items-center space-x-2 px-4 py-2 text-white hover:text-orange-400">
+                          <i class="fas fa-calendar-check"></i>
+                          <span>Attendance</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+              <i class="fas fa-users"></i>
+              <span>All Members</span>
+          </a>
+          <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+              <i class="fas fa-user-tie"></i>
+              <span>Trainer</span>
+          </a>
+          <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+              <i class="fas fa-running"></i>
+              <span>Trainee</span>
+          </a>
+          <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+              <i class="fas fa-heartbeat"></i>
+              <span>Health Updates</span>
+          </a>
+          <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+              <i class="fas fa-credit-card"></i>
+              <span>Member Payment</span>
+          </a>
+          <a href="#" class="flex items-center space-x-2 text-white font-bold hover:text-orange-400">
+              <i class="fas fa-chart-line"></i>
+              <span>Plan</span>
+          </a>
+      </nav>
+   </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+      <!-- Header -->
+      <header class="flex items-center justify-between">
+        <h1 class="text-2xl font-bold">Welcome Admin!</h1>
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-bell text-gray-500"></i>
+            <i class="fas fa-cog text-gray-500 hover:text-orange-400 cursor-pointer"></i>
+            <img src="https://cdn-icons-png.flaticon.com/512/4515/4515630.png" alt="User" 
+                 class="rounded-full w-10 h-10">
+        </div>
+    </header>
+
+      <!-- Cards Section -->
+      <section class="grid grid-cols-4 gap-6 mt-6">
+        <!-- Card 1 -->
+        <div class="relative bg-black text-white rounded-lg">
+          <img
+            src="https://img.freepik.com/premium-photo/empty-gym-black-white_946657-2622.jpg"
+            alt="Class"
+            class="rounded-lg w-full h-40 object-cover"
+          />
+          <div class="absolute bottom-4 left-4 text-xl font-bold">Class</div>
+          <div class="absolute bottom-4 right-4 text-4xl font-bold">4</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="relative bg-black text-white rounded-lg ">
+          <img
+            src="https://img.freepik.com/free-photo/black-white-photo-group-athletes-exercising-with-weight-bars-sports-training-gym_637285-2485.jpg"
+            alt="Trainers"
+            class="rounded-lg w-full h-32 object-cover"
+          />
+          <div class="absolute bottom-4 left-4 text-xl font-bold">Trainers</div>
+          <div class="absolute bottom-4 right-4 text-4xl font-bold">8</div>
+        </div>
+        <!-- Card 3 -->
+        <div class="relative bg-black text-white rounded-lg">
+          <img
+            src="https://c4.wallpaperflare.com/wallpaper/518/811/760/sports-gym-black-and-white-boxing-wallpaper-preview.jpg"
+            alt="Members"
+            class="rounded-lg w-full h-32 object-cover"
+          />
+          <div class="absolute bottom-4 left-4 text-xl font-bold">Members</div>
+          <div class="absolute bottom-4 right-4 text-4xl font-bold">20</div>
+        </div>
+        <!-- Card 4 -->
+        <div class="relative bg-black text-white rounded-lg">
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixxbJ0jfWcWuWDGDc6w8JJgGA3kZX15oacYGeqaOD_pZDWu6WDxQNRwYqYWVU9trnjOyiSmqv0EJnj_JHb5b8U03M3HoIqvLGGyA097T5J7xuaYjYmlyt6k1WpfFpD3S7-mPlcK_QMG1Pz/s640/6-Reasons-You-Should-Never-Open-a-Gym.png"
+            alt="Payments"
+            class="rounded-lg w-full h-32 object-cover"
+          />
+          <div class="absolute bottom-4 left-4 text-xl font-bold">Payments</div>
+        </div>
+      </section>
+
+      <!-- Table and Chart Section -->
+      <section class="grid grid-cols-2 gap-2 mt-6">
+        <h2 class="text-lg font-bold ">New Registrations</h2>
+        <h2 class="text-lg font-bold ">Total Traniee</h2>
+
+        <!-- New Registrations Table -->
+         
+        <div class="bg-white p-4 rounded-lg shadow">
+          <table class="table-auto w-full text-left text-sm">
+            <thead>
+              <tr class="border-b bg-gray-200">
+                <th class="py-2">Sr. No</th>
+                <th class="py-2">Full Name</th>
+                <th class="py-2">Contact No.</th>
+                <th class="py-2">Class</th>
+                <th class="py-2">Period</th>
+                <th class="py-2">Time Slot</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="py-2">1</td>
+                <td class="py-2">Rohan Jadhav</td>
+                <td class="py-2">1234567890</td>
+                <td class="py-2">Yoga</td>
+                <td class="py-2">2 Months</td>
+                <td class="py-2">08:00-09:00</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-2">1</td>
+                <td class="py-2">Rohan Jadhav</td>
+                <td class="py-2">1234567890</td>
+                <td class="py-2">Yoga</td>
+                <td class="py-2">2 Months</td>
+                <td class="py-2">08:00-09:00</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-2">1</td>
+                <td class="py-2">Rohan Jadhav</td>
+                <td class="py-2">1234567890</td>
+                <td class="py-2">Yoga</td>
+                <td class="py-2">2 Months</td>
+                <td class="py-2">08:00-09:00</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-2">1</td>
+                <td class="py-2">Rohan Jadhav</td>
+                <td class="py-2">1234567890</td>
+                <td class="py-2">Yoga</td>
+                <td class="py-2">2 Months</td>
+                <td class="py-2">08:00-09:00</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-2">1</td>
+                <td class="py-2">Rohan Jadhav</td>
+                <td class="py-2">1234567890</td>
+                <td class="py-2">Yoga</td>
+                <td class="py-2">2 Months</td>
+                <td class="py-2">08:00-09:00</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Total Trainee Chart -->
+        <div class="bg-gray-200 p-4 rounded-lg shadow relative">
+            <h2 class="text-lg mb-4">Total Trainee: 80</h2>
+            <div class="flex items-center justify-center h-48">
+              <div class="w-32 h-32 relative">
+                <!-- Outer circle (background) -->
+                <svg class="w-full h-full">
+                  <circle
+                    cx="50%"
+                    cy="50%"
+                    r="40%"
+                    stroke="gray"
+                    stroke-width="8"
+                    fill="none"
+                  />
+                  <!-- Orange Circle representing the overall trainees -->
+                  <circle
+                    cx="50%"
+                    cy="50%"
+                    r="40%"
+                    stroke="orange"
+                    stroke-width="8"
+                    fill="none"
+                    stroke-dasharray="251" <!-- This represents the total circumference -->
+                    stroke-dashoffset="80" <!-- Adjust to represent the number of trainees (80) -->
+                  />
+                  <!-- Color-coded sections for boys and girls -->
+                  <circle
+                    cx="50%"
+                    cy="50%"
+                    r="40%"
+                    stroke="blue" <!-- Boys section -->
+                    stroke-width="8"
+                    fill="none"
+                    stroke-dasharray="126.8" <!-- This is half of the total circle for boys -->
+                    stroke-dashoffset="80" <!-- Adjust to show boys' proportion -->
+                  />
+                  <circle
+                    cx="50%"
+                    cy="50%"
+                    r="40%"
+                    stroke="pink" <!-- Girls section -->
+                    stroke-width="8"
+                    fill="none"
+                    stroke-dasharray="124.2" <!-- This is the remaining part of the circle for girls -->
+                    stroke-dashoffset="50" <!-- Adjust to show girls' proportion -->
+                  />
+                </svg>
+                <!-- Total count in the center -->
+                <p class="absolute inset-0 flex items-center justify-center text-2xl font-bold">80</p>
+              </div>
+            </div>
+          
+            <!-- Additional Circles for Girls and Boys at the Right Bottom Corner -->
+            <div class="absolute bottom-12 right-4 flex flex-col items-center space-y-2">
+              <!-- Orange Circle for Girls -->
+              <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+              <p class="text-black">Girls</p>
+              <!-- Gray Circle for Boys -->
+              <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+              <p class="text-black">Boys</p>
+            </div>
+          </div>
+          
+    </section>
+    </main>
+  </div>
+  <script>
+    const adminToggle = document.getElementById('adminToggle');
+    const adminOptions = document.getElementById('adminOptions');
+    const adminArrow = document.getElementById('adminArrow');
+
+    adminToggle.addEventListener('click', function() {
+        adminOptions.classList.toggle('hidden');
+        adminArrow.classList.toggle('rotate-180');
+    });
+</script>
+</body>
+</html>
